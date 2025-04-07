@@ -133,7 +133,7 @@
     <div id="top-right">
         <a href="https://mail.google.com" target="_blank">Gmail</a>
         <a href="https://www.google.com/imghp" target="_blank">Images</a>
-        <img class="icon" id="apps-icon" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/50/000000/external-waffle-miscellaneous-those-icons-lineal-color-those-icons.png" alt="Google Apps">
+        <img class="icon" id="apps-icon" src="https://th.bing.com/th/id/OIP.4okqVxTFZbge2P3ZQYP1zQAAAA?rs=1&pid=ImgDetMain" alt="Google Apps">
         <img class="icon" id="profile-icon" src="https://img.icons8.com/color/96/000000/user-male-circle.png" alt="Profile Icon">
         <div id="apps-menu">
             <a href="https://drive.google.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/google-drive--v1.png" alt="Drive"> Drive</a>
@@ -155,49 +155,19 @@
         <img id="mic-icon" src="https://img.icons8.com/ios-filled/50/000000/microphone.png" alt="Microphone Icon">
     </div>
     <div id="shortcuts">
+        <!-- 10 Shortcut Icons -->
         <a class="shortcut" href="https://github.com"><img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub"> GitHub</a>
+        <a class="shortcut" href="https://meet.google.com"><img src="https://img.icons8.com/fluency/96/000000/google-meet.png" alt="Meet"> Meet</a>
+        <a class="shortcut" href="https://discord.com"><img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord"> Discord</a>
+        <a class="shortcut" href="https://www.google.com"><img src="https://img.icons8.com/color/96/000000/google-logo.png" alt="Google"> Google</a>
+        <a class="shortcut" href="https://reactjs.org"><img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React"> React</a>
+        <a class="shortcut" href="https://www.netflix.com"><img src="https://img.icons8.com/color/96/000000/netflix.png" alt="Netflix"> Netflix</a>
+        <a class="shortcut" href="https://www.spotify.com"><img src="https://img.icons8.com/color/96/000000/spotify.png" alt="Spotify"> Spotify</a>
+        <a class="shortcut" href="https://twitter.com"><img src="https://img.icons8.com/color/96/000000/twitter--v1.png" alt="Twitter"> Twitter</a>
+        <a class="shortcut" href="https://www.facebook.com"><img src="https://img.icons8.com/color/96/000000/facebook.png" alt="Facebook"> Facebook</a>
+        <a class="shortcut" href="https://www.instagram.com"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"> Instagram</a>
     </div>
     <button id="customize-button">Customize Chrome</button>
 
     <script>
-        const searchBar = document.getElementById('search-bar');
-        const micIcon = document.getElementById('mic-icon');
-        const appsIcon = document.getElementById('apps-icon');
-        const profileIcon = document.getElementById('profile-icon');
-        const appsMenu = document.getElementById('apps-menu');
-        const profileMenu = document.getElementById('profile-menu');
-
-        // Search functionality
-        searchBar.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                window.open(`https://www.google.com/search?q=${searchBar.value}`);
-            }
-        });
-
-        // Mic functionality (mock alert)
-        micIcon.addEventListener('click', function () {
-            alert('Voice search is currently not available.');
-        });
-
-        // Apps menu toggle
-        appsIcon.addEventListener('click', function () {
-            appsMenu.style.display = appsMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Profile menu toggle
-        profileIcon.addEventListener('click', function () {
-            profileMenu.style.display = profileMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close menus when clicking outside
-        document.addEventListener('click', function (e) {
-            if (!appsIcon.contains(e.target) && !appsMenu.contains(e.target)) {
-                appsMenu.style.display = 'none';
-            }
-            if (!profileIcon.contains(e.target) && !profileMenu.contains(e.target)) {
-                profileMenu.style.display = 'none';
-            }
-        });
-    </script>
-</body>
-</html>
+        const search
