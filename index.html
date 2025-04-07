@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Tab</title>
+    <title>Chrome New Tab Clone</title>
     <style>
         /* General Reset */
         * {
@@ -37,6 +37,35 @@
             width: 30px;
             height: 30px;
             margin-right: 10px;
+            cursor: pointer;
+        }
+        #apps-menu {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 10px;
+        }
+        .app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            font-size: 12px;
+            color: #333;
+            width: 60px;
+        }
+        .app img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
         }
         #google-logo {
             font-size: 60px;
@@ -91,8 +120,35 @@
     <div id="top-right">
         <a href="https://mail.google.com" target="_blank">Gmail</a>
         <a href="https://www.google.com/imghp" target="_blank">Images</a>
-        <img class="icon" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/50/000000/external-waffle-miscellaneous-those-icons-lineal-color-those-icons.png" alt="Google Apps">
+        <img class="icon" id="apps-icon" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/50/000000/external-waffle-miscellaneous-those-icons-lineal-color-those-icons.png" alt="Google Apps">
         <img class="icon" src="https://img.icons8.com/ios-glyphs/30/000000/circled-user.png" alt="Profile Icon">
+        <div id="apps-menu">
+            <!-- Google Apps -->
+            <a class="app" href="https://drive.google.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/google-drive--v1.png" alt="Drive">
+                Drive
+            </a>
+            <a class="app" href="https://calendar.google.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/google-calendar--v1.png" alt="Calendar">
+                Calendar
+            </a>
+            <a class="app" href="https://keep.google.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/google-keep.png" alt="Keep">
+                Keep
+            </a>
+            <a class="app" href="https://photos.google.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/google-photos--v1.png" alt="Photos">
+                Photos
+            </a>
+            <a class="app" href="https://meet.google.com" target="_blank">
+                <img src="https://img.icons8.com/fluency/48/000000/google-meet.png" alt="Meet">
+                Meet
+            </a>
+            <a class="app" href="https://maps.google.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/google-maps-new.png" alt="Maps">
+                Maps
+            </a>
+        </div>
     </div>
     <div id="google-logo">Google</div>
     <div id="search-container">
@@ -125,18 +181,22 @@
             <img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React Icon">
             React
         </a>
-        <a class="shortcut" href="https://www.netflix.com" target="_blank">
-            <img src="https://img.icons8.com/color/96/000000/netflix.png" alt="Netflix Icon">
-            Netflix
-        </a>
-        <a class="shortcut" href="https://www.spotify.com" target="_blank">
-            <img src="https://img.icons8.com/color/96/000000/spotify.png" alt="Spotify Icon">
-            Spotify
-        </a>
-        <a class="shortcut" href="#" target="_blank">
-            <img src="https://img.icons8.com/color/96/000000/add.png" alt="Add Shortcut Icon">
-            Add Shortcut
-        </a>
     </div>
+    <script>
+        const appsIcon = document.getElementById('apps-icon');
+        const appsMenu = document.getElementById('apps-menu');
+
+        appsIcon.addEventListener('click', () => {
+            // Toggle visibility of the apps menu
+            appsMenu.style.display = appsMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!appsIcon.contains(e.target) && !appsMenu.contains(e.target)) {
+                appsMenu.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
