@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
-    <link rel="icon" href="https://th.bing.com/th/id/R.23b92bf8b18063c734c6dc7df07cf2f7?rik=zGxaWAcZM%2fXPpw&pid=ImgRaw&r=0"> <!-- Chrome Favicon -->
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/chrome.png"> <!-- Chrome Favicon -->
     <style>
         /* General Reset */
         * {
@@ -40,7 +40,7 @@
             margin-right: 10px;
             cursor: pointer;
         }
-        #profile-menu {
+        #apps-menu, #profile-menu {
             position: absolute;
             top: 50px;
             right: 20px;
@@ -51,17 +51,21 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: none;
             padding: 10px;
+            z-index: 10;
+        }
+        #apps-menu a, #profile-menu p {
+            margin: 5px 0;
+        }
+        #apps-menu a img, #profile-menu img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
         }
         #profile-menu img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin-bottom: 10px;
-        }
-        #profile-menu p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #333;
         }
         #google-logo {
             font-size: 60px;
@@ -72,8 +76,6 @@
         #search-container {
             position: relative;
             width: 60%;
-            display: flex;
-            align-items: center;
             margin-bottom: 20px;
         }
         #search-bar {
@@ -87,6 +89,8 @@
         #mic-icon {
             position: absolute;
             right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
             width: 20px;
             height: 20px;
@@ -129,36 +133,17 @@
     <div id="top-right">
         <a href="https://mail.google.com" target="_blank">Gmail</a>
         <a href="https://www.google.com/imghp" target="_blank">Images</a>
-         <img class="icon" id="apps-icon" src="https://th.bing.com/th/id/OIP.4okqVxTFZbge2P3ZQYP1zQAAAA?rs=1&pid=ImgDetMain" alt="Google Apps">
-Icon">
+        <img class="icon" id="apps-icon" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/50/000000/external-waffle-miscellaneous-those-icons-lineal-color-those-icons.png" alt="Google Apps">
+        <img class="icon" id="profile-icon" src="https://img.icons8.com/color/96/000000/user-male-circle.png" alt="Profile Icon">
         <div id="apps-menu">
-            <!-- Google Apps -->
-            <a class="app" href="https://drive.google.com" target="_blank">
-                <img src="https://th.bing.com/th/id/OIP.7zfMdkSABioHNJpv6oZpjAHaEK?rs=1&pid=ImgDetMain" alt="Drive">
-                Drive
-            </a>
-            <a class="app" href="https://calendar.google.com" target="_blank">
-                <img src="https://th.bing.com/th/id/R.d4ea7a71a68a413dee7bd076a9475209?rik=%2bXJWcxfI7nK3%2fA&pid=ImgRaw&r=0" alt="Calendar">
-                Calendar
-            </a>
-            <a class="app" href="https://keep.google.com" target="_blank">
-                <img src="https://th.bing.com/th/id/OIP.DWFtSvxpfNPbt3myhA-3LwHaHa?rs=1&pid=ImgDetMain" alt="Keep">
-                Keep
-            </a>
-            <a class="app" href="https://photos.google.com" target="_blank">
-                <img src="https://th.bing.com/th/id/R.a87482d81dcaf1b805fbf143b45202e8?rik=j4L%2bhdKhtHtbeA&pid=ImgRaw&r=0" alt="Photos">
-                Photos
-            </a>
-            <a class="app" href="https://meet.google.com" target="_blank">
-                <img src="https://th.bing.com/th/id/OIP.dz0J6dYofoqPADKrGb8LyAHaHa?rs=1&pid=ImgDetMain" alt="Meet">
-                Meet
-            </a>
-            <a class="app" href="https://maps.google.com" target="_blank">
-                <img src="https://th.bing.com/th/id/OIP.TkQbW2rAMuWlO4Wp0AXgSgHaHa?rs=1&pid=ImgDetMain" alt="Maps">
-                Maps
-        <img class="icon" id="profile-icon" src="https://th.bing.com/th/id/OIP.v2btc1HcWm37V1Mt8vkaTgHaHa?rs=1&pid=ImgDetMain" alt="Profile Icon">
+            <a href="https://drive.google.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/google-drive--v1.png" alt="Drive"> Drive</a>
+            <a href="https://calendar.google.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/google-calendar--v1.png" alt="Calendar"> Calendar</a>
+            <a href="https://keep.google.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/google-keep.png" alt="Keep"> Keep</a>
+            <a href="https://photos.google.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/google-photos--v1.png" alt="Photos"> Photos</a>
+            <a href="https://meet.google.com" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/google-meet.png" alt="Meet"> Meet</a>
+        </div>
         <div id="profile-menu">
-            <img src="https://th.bing.com/th/id/OIP.v2btc1HcWm37V1Mt8vkaTgHaHa?rs=1&pid=ImgDetMain" alt="Profile Image">
+            <img src="https://img.icons8.com/color/96/000000/user-male-circle.png" alt="Profile Image">
             <p>Hi, Max</p>
             <p>a.tormen2012@ssdedu.dev</p>
             <p>Managed By ssdedu.dev</p>
@@ -170,33 +155,16 @@ Icon">
         <img id="mic-icon" src="https://img.icons8.com/ios-filled/50/000000/microphone.png" alt="Microphone Icon">
     </div>
     <div id="shortcuts">
-        <!-- Shortcut Icons -->
-        <a class="shortcut" href="https://github.com" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub Icon">
-            GitHub
-        </a>
-        <a class="shortcut" href="https://meet.google.com" target="_blank">
-            <img src="https://img.icons8.com/fluency/96/000000/google-meet.png" alt="Google Meet Icon">
-            Meet
-        </a>
-        <a class="shortcut" href="https://discord.com" target="_blank">
-            <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord Icon">
-            Discord
-        </a>
-        <a class="shortcut" href="https://www.google.com" target="_blank">
-            <img src="https://img.icons8.com/color/96/000000/google-logo.png" alt="Google Icon">
-            Google
-        </a>
-        <a class="shortcut" href="https://reactjs.org" target="_blank">
-            <img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React Icon">
-            React
-        </a>
+        <a class="shortcut" href="https://github.com"><img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub"> GitHub</a>
     </div>
     <button id="customize-button">Customize Chrome</button>
+
     <script>
         const searchBar = document.getElementById('search-bar');
         const micIcon = document.getElementById('mic-icon');
+        const appsIcon = document.getElementById('apps-icon');
         const profileIcon = document.getElementById('profile-icon');
+        const appsMenu = document.getElementById('apps-menu');
         const profileMenu = document.getElementById('profile-menu');
 
         // Search functionality
@@ -211,13 +179,21 @@ Icon">
             alert('Voice search is currently not available.');
         });
 
-        // Toggle profile menu
+        // Apps menu toggle
+        appsIcon.addEventListener('click', function () {
+            appsMenu.style.display = appsMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Profile menu toggle
         profileIcon.addEventListener('click', function () {
             profileMenu.style.display = profileMenu.style.display === 'block' ? 'none' : 'block';
         });
 
-        // Close profile menu when clicking outside
+        // Close menus when clicking outside
         document.addEventListener('click', function (e) {
+            if (!appsIcon.contains(e.target) && !appsMenu.contains(e.target)) {
+                appsMenu.style.display = 'none';
+            }
             if (!profileIcon.contains(e.target) && !profileMenu.contains(e.target)) {
                 profileMenu.style.display = 'none';
             }
